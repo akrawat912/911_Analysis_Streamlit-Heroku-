@@ -8,7 +8,6 @@ Created on Fri Jul  3 10:06:51 2020
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-import webbrowser
 
 df = pd.read_csv('911_data_processed.csv')
 
@@ -97,8 +96,8 @@ if side_choice=='About Author':
      git_url = 'https://github.com/akrawat912/'
      link_url = 'https://www.linkedin.com/in/aakash-singh-966746154/'
      if st.button('Github'):
-         webbrowser.open_new_tab(git_url)
+         st.success(git_url)
      if st.button('LinkedIn'):
-         webbrowser.open_new_tab(link_url)
+         st.success(link_url)
            
         
